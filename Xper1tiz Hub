@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub |Make By Xper1tiz|", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub |Make By Xper1tiz And Ozgurefe5362|", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -11,7 +11,7 @@ local Section = Tab:AddSection({
 	Name = "Xper1tiz Hub"
 })
 
-Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.           By Xper1tiz")
+Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.Ozgurefe5362 Thanks For Your Help.           By Xper1tiz")
 
 local Section = Tab:AddSection({
 	Name = "Main"
