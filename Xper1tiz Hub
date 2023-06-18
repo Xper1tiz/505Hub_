@@ -11,7 +11,7 @@ local Section = Tab:AddSection({
 	Name = "Xper1tiz Hub"
 })
 
-Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.Ozgurefe5362 Thanks For The Help       By Xper1tiz")
+Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.Ozgurefe5362 Thanks For The Help.       By Xper1tiz")
 
 local Section = Tab:AddSection({
 	Name = "Main"
