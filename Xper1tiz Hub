@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub |Make By Xper1tiz And Ozgurefe5362|", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub V1.2", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub V1.2 |Make By Xper1tiz And Ozgurefe5362|", SaveConfig = true, ConfigFolder = "OrionTest"})
+Notify("Xper1tiz", "Welcome To Xper1tiz Hub", "", 4);
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -11,7 +12,7 @@ local Section = Tab:AddSection({
 	Name = "Xper1tiz Hub"
 })
 
-Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.Ozgurefe5362 Thanks For The Help.       By Xper1tiz")
+Tab:AddParagraph("Welcome to Xper1tiz Hub","Welcome to Xper1tiz Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.Ozgurefe5362 Thanks For The Help       By Xper1tiz")
 
 local Section = Tab:AddSection({
 	Name = "Main"
@@ -5420,9 +5421,9 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Nerd V4 (Old Script)",
+	Name = "Nerd V5 (New Version)",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/doorsnerdv4.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/NeRDV5.lua"))()
   	end    
 })
 
