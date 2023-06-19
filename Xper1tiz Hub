@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub V1.2", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub V1.2 |Make By Xper1tiz And Ozgurefe5362|", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Xper1tiz Hub", HidePremium = false, IntroText = "Welcome to Xper1tiz Hub |Make By Xper1tiz And Ozgurefe5362|", SaveConfig = true, ConfigFolder = "OrionTest"})
 Notify("Xper1tiz", "Welcome To Xper1tiz Hub", "", 4);
 
 local Tab = Window:MakeTab({
