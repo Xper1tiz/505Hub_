@@ -31,7 +31,7 @@ local Window = Rayfield:CreateWindow({
  local Button = Tab:CreateButton({
     Name = "505 Hub V1.2",
     Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Xper1tiz/name/main/505%20Hub"), true))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/Xper1tiz/505Hub_/main/505%20Hub%20V1.2"), true))()
     end,
  })
 
