@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KiLoS Hub V1", HidePremium = false, IntroText = "Welcome to KiLoS Hub V1 |Make By Xper1tiz |", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "505 Hub V1.2", HidePremium = false, IntroText = "Welcome to 505 Hub V1.2 |Make By semih53sn|", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -8,10 +8,10 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Xper1tiz Hub"
+	Name = "505 Hub"
 })
 
-Tab:AddParagraph("Welcome to KiLoS Hub","Welcome to KiLoS Hub. This Hub Is Newly Made And Made By Xper1tiz. Hope You Like It. Have Fun.       By Xper1tiz")
+Tab:AddParagraph("Welcome to 505 Hub","Welcome to 505 Hub. This Hub Is Newly Made And Made By semih53sn. Hope You Like It. Have Fun.       By semih53sn")
 
 local Section = Tab:AddSection({
 	Name = "Main"
@@ -3339,6 +3339,130 @@ Tab:AddButton({
   	end    
 })
 
+
+Tab:AddButton({
+	Name = "Hacker Chat",
+	Callback = function()
+        --[[
+Made by Rouxhaver
+When two people execute the script they can use the text box to chat with each other privately and uncensored
+Note: only works on the newer bubble chat and not the old one and long messages get tagged
+]]
+
+a = "的"
+b = "一"
+c = "是"
+d = "不"
+e = "了"
+f = "人"
+g = "我"
+h = "在"
+i = "有"
+j = "他"
+k = "这"
+l = "为"
+m = "之"
+n = "大"
+o = "来"
+p = "以"
+q = "个"
+r = "中"
+s = "上"
+t = "们"
+u = "到"
+v = "说"
+w = "国"
+x = "和"
+y = "地"
+z = "也"
+
+function convert(str)
+	str = str:lower()
+	return str:gsub("a",a):gsub("b",b):gsub("c",c):gsub("d",d):gsub("e",e):gsub("f",f):gsub("g",g):gsub("h",h):gsub("i",i):gsub("j",j):gsub("k",k):gsub("l",l):gsub("m",m):gsub("n",n):gsub("o",o):gsub("p",p):gsub("q",q):gsub("r",r):gsub("s",s):gsub("t",t):gsub("u",u):gsub("v",v):gsub("w",w):gsub("x",x):gsub("y",y):gsub("z",z)
+end
+
+function unconvert(str)
+	str = str:lower()
+	return str:gsub(a,"a"):gsub(b,"b"):gsub(c,"c"):gsub(d,"d"):gsub(e,"e"):gsub(f,"f"):gsub(g,"g"):gsub(h,"h"):gsub(i,"i"):gsub(j,"j"):gsub(k,"k"):gsub(l,"l"):gsub(m,"m"):gsub(n,"n"):gsub(o,"o"):gsub(p,"p"):gsub(q,"q"):gsub(r,"r"):gsub(s,"s"):gsub(t,"t"):gsub(u,"u"):gsub(v,"v"):gsub(w,"w"):gsub(x,"x"):gsub(y,"y"):gsub(z,"z")
+end
+
+function chat(str)
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(str,"All")
+end
+
+player = game:GetService("Players").LocalPlayer
+
+SG = Instance.new("ScreenGui",player.PlayerGui)
+
+frame = Instance.new("Frame",SG)
+frame.Size = UDim2.new(0.2,0,0.2,0)
+frame.AnchorPoint = Vector2.new(0.5,0.5)
+frame.Position = UDim2.new(0.5,0,0.8,0)
+frame.Active = true
+frame.Draggable = true
+frame.BackgroundColor3 = Color3.new(0.14902, 0.8, 1)
+
+textbox = Instance.new("TextBox",frame)
+textbox.AnchorPoint = Vector2.new(0.5,0.5)
+textbox.Size = UDim2.new(0.95,0,0.65,0)
+textbox.Position = UDim2.new(0.5,0,0.6,0)
+textbox.TextScaled = true
+textbox.BackgroundColor3 = Color3.new(1,1,1)
+textbox.Text = "Text"
+textbox.TextColor3 = Color3.new(0, 0, 0)
+
+title = Instance.new("TextLabel",frame)
+title.Size = UDim2.new(0.3,0,0.3,0)
+title.TextScaled = true
+title.Text = "hacker chat"
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.new(0, 0, 0)
+
+closebutton = Instance.new("TextButton",frame)
+closebutton.Size = UDim2.new(0.15,0,0.25,0)
+closebutton.AnchorPoint = Vector2.new(1,0)
+closebutton.TextScaled = true
+closebutton.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+closebutton.Text = "X"
+closebutton.Position = UDim2.new(1,0,0,0)
+closebutton.TextColor3 = Color3.new(1, 1, 1)
+
+ui = Instance.new("UIAspectRatioConstraint",frame)
+ui.AspectRatio = 4
+
+closebutton.MouseButton1Up:Connect(function()
+	SG:Destroy()
+end)
+
+textbox.FocusLost:Connect(function()
+	chat("三"..convert(textbox.Text))
+end)
+
+player.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLogDisplay.Scroller.ChildAdded:Connect(function(msg)
+	wait(1)
+	local message = msg.TextLabel.Text
+	if message:match("三") then
+		msg.TextLabel.TextColor3 = Color3.new(1, 0.85098, 0)
+		message = unconvert(message:gsub("三",""))
+		msg.TextLabel.Text = message
+	end
+end)
+
+Coregui = game:GetService("CoreGui")
+if Coregui:FindFirstChild("BubbleChat") then
+	Coregui.BubbleChat.DescendantAdded:Connect(function(bubble)
+		wait(1)
+		if bubble:IsA("TextLabel") then
+			if bubble.Text:match("三") then
+				bubble.Parent.BackgroundColor3 = Color3.new(1, 0.85098, 0)
+				bubble.Text = unconvert(bubble.Text:gsub("三",""))
+			end
+		end
+	end)
+end
+  	end    
+})
+
 Tab:AddButton({
 	Name = "FE Chat Mimic Script",
 	Callback = function()
@@ -4459,43 +4583,6 @@ coroutine.wrap(RVRTSG_fake_script)()
 })
 
 Tab:AddButton({
-	Name = "Pedro.exe Translator",
-	Callback = function()
-        pcall(function()
-            loadstring(
-                --[[
-          
-                ░░░░░██╗  ███╗░░░███╗███████╗███╗░░░███╗███████╗
-                ░░░░░██║  ████╗░████║██╔════╝████╗░████║██╔════╝
-                ░░░░░██║  ██╔████╔██║█████╗░░██╔████╔██║█████╗░░
-                ██╗░░██║  ██║╚██╔╝██║██╔══╝░░██║╚██╔╝██║██╔══╝░░
-                ╚█████╔╝  ██║░╚═╝░██║███████╗██║░╚═╝░██║███████╗
-                ░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝
-          
-          
-                Keybind:
-               
-                - Semicolon // To trigger chat box
-                - Enter // To submit your chat
-                - Click on player chat // To view his translation
-                - Quote // To hide/show UI
-               
-                Next Update:
-               
-                - Ill make it so it auto detects language of chat upon click
-                - yes thats it
-                --]]
-          
-                game:HttpGet(
-                    'https://raw.githubusercontent.com/PivotEngine/cool_scripts/main/Pedro.exe',
-                    true
-                )
-            )();
-          end)
-  	end    
-})
-
-Tab:AddButton({
 	Name = "Universal Box Esp",
 	Callback = function()
         --// Universal Box ESP (Works on Arsenal and other games)
@@ -5106,6 +5193,128 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
+	Name = "Blade Ball"
+})
+
+Tab:AddButton({
+	Name = "Auto Parry",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/Circle"))() --Press "X" when in close range (toggle) its basically parry spam (100% winrate)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Any Abilities",
+	Callback = function()
+        local localPlayer = game.Players.LocalPlayer
+local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+local abilitiesFolder = character:WaitForChild("Abilities")
+ 
+local ChosenAbility = "Raging Deflection"
+ 
+local function createGUI()
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "AbilityChooser"
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ 
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 200, 0, 250)
+    frame.Position = UDim2.new(0.5, -100, 0.5, -125)
+    frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+    frame.BorderSizePixel = 0
+    frame.Parent = screenGui
+ 
+    local isDragging = false
+    local dragInput
+    local dragStart
+    local startPos
+ 
+    local function update(input)
+        local delta = input.Position - dragStart
+        frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+ 
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            isDragging = true
+            dragStart = input.Position
+            startPos = frame.Position
+ 
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    isDragging = false
+                end
+            end)
+        end
+    end)
+ 
+    frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then
+            dragInput = input
+        end
+    end)
+ 
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if input == dragInput and isDragging then
+            update(input)
+        end
+    end)
+ 
+    local abilities = {"Dash", "Forcefield", "Invisibility", "Platform", "Raging Deflection", "Shadow Step", "Super Jump", "Telekinesis", "Thunder Dash"}
+    local buttonHeight = 20
+    for i, ability in ipairs(abilities) do
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(1, 0, 0, buttonHeight)
+        button.Position = UDim2.new(0, 0, 0, (i - 1) * (buttonHeight + 5))
+        button.Text = ability
+        button.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+        button.BorderColor3 = Color3.new(1, 1, 1)
+        button.Parent = frame
+ 
+        button.MouseButton1Click:Connect(function()
+            ChosenAbility = ability
+        end)
+    end
+end
+ 
+local function onCharacterAdded(newCharacter)
+    character = newCharacter
+    abilitiesFolder = character:WaitForChild("Abilities")
+    createGUI()
+end
+ 
+localPlayer.CharacterAdded:Connect(onCharacterAdded)
+createGUI()
+ 
+while task.wait() do
+    for _, obj in pairs(abilitiesFolder:GetChildren()) do
+        if obj:IsA("LocalScript") then
+            if obj.Name == ChosenAbility then
+                obj.Disabled = false
+            else
+                obj.Disabled = true
+            end
+        end
+    end
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Bedol Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/SourceLua/main/Blade_Ball.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "SadlekAksi Hub",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/SadlekAski/Scripts/main/Blade%20Ball/Equip%20any%20ability.lua'))()
+  	end    
+})
+
+local Section = Tab:AddSection({
 	Name = "MM2"
 })
 
@@ -5206,6 +5415,17 @@ Tab:AddButton({
 	Name = "StringX Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "TPS Street Soccer"
+})
+
+Tab:AddButton({
+	Name = "TPS Street Soccer Hub",
+	Callback = function()
+	    loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Street%20Soccer'))()
   	end    
 })
 
@@ -5328,6 +5548,13 @@ Tab:AddButton({
 
 local Section = Tab:AddSection({
 	Name = "Lucky Block"
+})
+
+Tab:AddButton({
+	Name = "Gears Duper",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zviye/LB-Duper/main/LB-Duper-GUI",true))()
+  	end    
 })
 
 Tab:AddButton({
