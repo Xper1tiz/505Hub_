@@ -5469,6 +5469,14 @@ local Section = Tab:AddSection({
 	Name = "JailBreak"
 })
 
+
+Tab:AddButton({
+	Name = "Sky Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/arlists/Sky-Hub/main/Main", true))()
+  	end    
+})
+
 Tab:AddButton({
 	Name = "EVO V4",
 	Callback = function()
