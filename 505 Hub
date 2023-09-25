@@ -38,7 +38,7 @@ local Window = Rayfield:CreateWindow({
  local Tab = Window:CreateTab("Destroy UI", 4483362458) -- Title, Image
 
  local Button = Tab:CreateButton({
-    Name = "505 Hub V1.2",
+    Name = "Destroy",
     Callback = function()
         Rayfield:Destroy()
     end,
