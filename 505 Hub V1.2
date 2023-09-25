@@ -30,6 +30,8 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddLabel("SOON")
+
 local Tab = Window:MakeTab({
 	Name = "Admin",
 	Icon = "rbxassetid://4483345998",
@@ -5309,13 +5311,6 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Kater Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/KaterHub.Lua"))()
-  	end    
-})
-
-Tab:AddButton({
 	Name = "Unfair Hub (30+ Games)",
 	Callback = function()
         loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-unfair-Hub-3936"))()
@@ -5330,16 +5325,16 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "X Ghost Hub X",
+	Name = "V.G Hub (120+ Games)",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "V.G Hub (120+ Games)",
+	Name = "Air Hub V2",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
   	end    
 })
 
@@ -5365,9 +5360,23 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "X Ghost Hub X",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+  	end    
+})
+
+Tab:AddButton({
 	Name = "Pendulum Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Kater Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KATERGaming/Roblox/main/KaterHub.Lua"))()
   	end    
 })
 
