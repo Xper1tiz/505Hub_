@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
     LoadingSubtitle = "by semih53sn",
     ConfigurationSaving = {
        Enabled = true,
-       FolderName = 505Hub, -- Create a custom folder for your hub/game
+       FolderName = nil, -- Create a custom folder for your hub/game
        FileName = "505 Hub"
     },
     Discord = {
