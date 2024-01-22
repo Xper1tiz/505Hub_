@@ -32,7 +32,7 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.171640843, 0, 0.125703946, 0)
 Main.Size = UDim2.new(0, 331, 0, 157)
-Main.Visible = false
+Main.Visible = true
 
 Close.Name = "Close"
 Close.Parent = Main
