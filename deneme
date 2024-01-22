@@ -23,7 +23,7 @@ local Open = Instance.new("TextButton")
 --Properties:
 
 Lucky_Block.Name = "Lucky_ Block"
-Lucky_Block.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Lucky_Block.Parent = game.CoreGui
 
 Main.Name = "Main"
 Main.Parent = Lucky_Block
