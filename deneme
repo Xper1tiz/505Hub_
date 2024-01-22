@@ -1,0 +1,252 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Lucky_Block = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local TabHolder = Instance.new("Frame")
+local Tab1 = Instance.new("TextButton")
+local Tab2 = Instance.new("TextButton")
+local Blocks = Instance.new("Frame")
+local NormalLuckyBlock = Instance.new("TextButton")
+local SuperBlock = Instance.new("TextButton")
+local DiamondBlock = Instance.new("TextButton")
+local RainbowBlock = Instance.new("TextButton")
+local GalaxyBlock = Instance.new("TextButton")
+local Weapons = Instance.new("Frame")
+local GetAllWeapons = Instance.new("TextButton")
+local OpenGu = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+Lucky_Block.Name = "Lucky_ Block"
+Lucky_Block.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = Lucky_Block
+Main.BackgroundColor3 = Color3.fromRGB(74, 192, 255)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.171640843, 0, 0.125703946, 0)
+Main.Size = UDim2.new(0, 331, 0, 157)
+Main.Visible = false
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.92726773, 0, 0, 0)
+Close.Size = UDim2.new(0, 24, 0, 26)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+Close.MouseButton1Down:connect(function()
+	Main.Visible = false
+	OpenGu.Visible = true
+end)
+
+
+TabHolder.Name = "TabHolder"
+TabHolder.Parent = Main
+TabHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabHolder.BorderSizePixel = 0
+TabHolder.Position = UDim2.new(0, 0, 4.85948703e-08, 0)
+TabHolder.Size = UDim2.new(0, 84, 0, 157)
+
+Tab1.Name = "Tab1"
+Tab1.Parent = TabHolder
+Tab1.BackgroundColor3 = Color3.fromRGB(28, 206, 255)
+Tab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab1.BorderSizePixel = 0
+Tab1.Size = UDim2.new(0, 84, 0, 50)
+Tab1.Font = Enum.Font.SourceSans
+Tab1.Text = "Blocks"
+Tab1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Tab1.TextSize = 14.000
+
+Tab2.Name = "Tab2"
+Tab2.Parent = TabHolder
+Tab2.BackgroundColor3 = Color3.fromRGB(28, 206, 255)
+Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab2.BorderSizePixel = 0
+Tab2.Position = UDim2.new(0, 0, 0.532710254, 0)
+Tab2.Size = UDim2.new(0, 84, 0, 50)
+Tab2.Font = Enum.Font.SourceSans
+Tab2.Text = "Get All Weapons"
+Tab2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Tab2.TextSize = 14.000
+
+Blocks.Name = "Blocks"
+Blocks.Parent = Main
+Blocks.BackgroundColor3 = Color3.fromRGB(74, 192, 255)
+Blocks.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Blocks.BorderSizePixel = 0
+Blocks.Position = UDim2.new(0.252252251, 0, 5.12039904e-08, 0)
+Blocks.Size = UDim2.new(0, 224, 0, 157)
+Blocks.Visible = false
+
+NormalLuckyBlock.Name = "NormalLuckyBlock"
+NormalLuckyBlock.Parent = Blocks
+NormalLuckyBlock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NormalLuckyBlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NormalLuckyBlock.BorderSizePixel = 0
+NormalLuckyBlock.Size = UDim2.new(0, 112, 0, 50)
+NormalLuckyBlock.Font = Enum.Font.SourceSansBold
+NormalLuckyBlock.Text = "Normal Lucky Block"
+NormalLuckyBlock.TextColor3 = Color3.fromRGB(255, 238, 0)
+NormalLuckyBlock.TextScaled = true
+NormalLuckyBlock.TextSize = 14.000
+NormalLuckyBlock.TextWrapped = true
+NormalLuckyBlock.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnLuckyBlock:FireServer()
+end)
+
+SuperBlock.Name = "SuperBlock"
+SuperBlock.Parent = Blocks
+SuperBlock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SuperBlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SuperBlock.BorderSizePixel = 0
+SuperBlock.Position = UDim2.new(0.5, 0, 0, 0)
+SuperBlock.Size = UDim2.new(0, 112, 0, 50)
+SuperBlock.Font = Enum.Font.SourceSansBold
+SuperBlock.Text = "Super Block"
+SuperBlock.TextColor3 = Color3.fromRGB(255, 3, 251)
+SuperBlock.TextScaled = true
+SuperBlock.TextSize = 14.000
+SuperBlock.TextWrapped = true
+SuperBlock.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+end)
+
+DiamondBlock.Name = "DiamondBlock"
+DiamondBlock.Parent = Blocks
+DiamondBlock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DiamondBlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiamondBlock.BorderSizePixel = 0
+DiamondBlock.Position = UDim2.new(0, 0, 0.335258037, 0)
+DiamondBlock.Size = UDim2.new(0, 112, 0, 50)
+DiamondBlock.Font = Enum.Font.SourceSansBold
+DiamondBlock.Text = "Diamond Block"
+DiamondBlock.TextColor3 = Color3.fromRGB(0, 179, 255)
+DiamondBlock.TextScaled = true
+DiamondBlock.TextSize = 14.000
+DiamondBlock.TextWrapped = true
+DiamondBlock.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+end)
+
+RainbowBlock.Name = "RainbowBlock"
+RainbowBlock.Parent = Blocks
+RainbowBlock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RainbowBlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RainbowBlock.BorderSizePixel = 0
+RainbowBlock.Position = UDim2.new(0.5, 0, 0.335258037, 0)
+RainbowBlock.Size = UDim2.new(0, 112, 0, 50)
+RainbowBlock.Font = Enum.Font.SourceSansBold
+RainbowBlock.Text = "Rainbow Block"
+RainbowBlock.TextColor3 = Color3.fromRGB(230, 0, 0)
+RainbowBlock.TextScaled = true
+RainbowBlock.TextSize = 14.000
+RainbowBlock.TextWrapped = true
+RainbowBlock.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+end)
+
+
+GalaxyBlock.Name = "GalaxyBlock"
+GalaxyBlock.Parent = Blocks
+GalaxyBlock.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GalaxyBlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GalaxyBlock.BorderSizePixel = 0
+GalaxyBlock.Position = UDim2.new(0.25, 0, 0.681528687, 0)
+GalaxyBlock.Size = UDim2.new(0, 112, 0, 50)
+GalaxyBlock.Font = Enum.Font.SourceSansBold
+GalaxyBlock.Text = "Galaxy Block"
+GalaxyBlock.TextColor3 = Color3.fromRGB(147, 53, 255)
+GalaxyBlock.TextScaled = true
+GalaxyBlock.TextSize = 14.000
+GalaxyBlock.TextWrapped = true
+GalaxyBlock.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+end)
+
+Weapons.Name = "Weapons"
+Weapons.Parent = Main
+Weapons.BackgroundColor3 = Color3.fromRGB(74, 192, 255)
+Weapons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Weapons.BorderSizePixel = 0
+Weapons.Position = UDim2.new(0.252252221, 0, 4.85948703e-08, 0)
+Weapons.Size = UDim2.new(0, 224, 0, 157)
+Weapons.Visible = false
+
+GetAllWeapons.Name = "GetAllWeapons"
+GetAllWeapons.Parent = Weapons
+GetAllWeapons.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GetAllWeapons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetAllWeapons.BorderSizePixel = 0
+GetAllWeapons.Position = UDim2.new(0.0535714291, 0, 0.337579608, 0)
+GetAllWeapons.Size = UDim2.new(0, 200, 0, 50)
+GetAllWeapons.Font = Enum.Font.SourceSansBold
+GetAllWeapons.Text = "Get All Weapons"
+GetAllWeapons.TextColor3 = Color3.fromRGB(255, 253, 253)
+GetAllWeapons.TextScaled = true
+GetAllWeapons.TextSize = 14.000
+GetAllWeapons.TextWrapped = true
+GetAllWeapons.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+	game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+	game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+	game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+end
+end)
+
+OpenGu.Name = "Open Guı"
+OpenGu.Parent = Lucky_Block
+OpenGu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenGu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenGu.BorderSizePixel = 0
+OpenGu.Position = UDim2.new(-0.00043501216, 0, 0.38219285, 0)
+OpenGu.Size = UDim2.new(0, 104, 0, 36)
+
+Open.Name = "Open"
+Open.Parent = OpenGu
+Open.BackgroundColor3 = Color3.fromRGB(80, 185, 255)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.00503210118, 0, 0, 0)
+Open.Size = UDim2.new(0, 110, 0, 36)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open Gui"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+	Main.Visible = true
+	OpenGu.Visible = false
+end)
+
+-- Scripts:
+
+local function ZPGV_fake_script() -- Tab1.Script 
+	local script = Instance.new('Script', Tab1)
+
+	script.Parent.MouseButton1Down:Connect( function()
+		script.Parent.Parent.Parent.Tab1.Visible = true
+	end)
+	
+end
+coroutine.wrap(ZPGV_fake_script)()
+local function QFYNMAJ_fake_script() -- Tab2.Script 
+	local script = Instance.new('Script', Tab2)
+
+	script.Parent.MouseButton1Down:Connect( function()
+		script.Parent.Parent.Parent.Tab1.Visible = true
+		script.Parent.Parent.Parent.Tab2.Visible = false
+	end)
+end
+coroutine.wrap(QFYNMAJ_fake_script)()
